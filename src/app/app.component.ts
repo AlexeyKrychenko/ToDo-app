@@ -23,18 +23,24 @@ export class AppComponent implements OnInit{
     }
 
     fillForm() {
-        return new FormControl(this.todoForm.value.addInput);
+        return new FormGroup({
+            name: new FormControl(this.todoForm.value.addInput),
+            check: new FormControl(false)
+        });
     }
 
     add() {
         this.TodoArray.push(this.fillForm());
         this.length = `${this.TodoArray.value.length} items length`;
-        console.log(this.TodoArray);
+
     }
 
     deleteTodo(i: number) {
         this.TodoArray.removeAt(i);
         this.length = `${this.TodoArray.value.length} items length`;
-        console.log(this.TodoArray.removeAt(i));
+    }
+
+    checked() {
+        this.TodoArray.value.check = !this.TodoArray.value.check;
     }
 }

@@ -1,26 +1,24 @@
 
-
 <form [formGroup]="todoForm">
     <input type="text" placeholder="What needs to be done?" formControlName="addInput">
     <button (click)="add()">+</button>
     <div formArrayName="todo">
         <div *ngFor="let todo of TodoArray.controls; let i = index">
-            <input type="checkbox">
+            <input type="checkbox" [checked]="todo.value.check" (click)="checked()">
 
-            <span>{{todo.value}}</span>
+            <span>{{todo.value.name}}</span>
 
             <button (click)="deleteTodo(i)">X</button>
         </div>
     </div>
+    <div *ngIf="TodoArray.length > 0">
+        <p>{{length}}</p>
+    <div>
+        <a routerLink="">All</a>
+        <a routerLink="active">Active</a>
+        <a routerLink="completed">Completed</a>
+        <router-outlet></router-outlet>
+    </div>
+    </div>
 </form>
 
-<div *ngIf="TodoArray.length > 0">
-    <p>{{length}}</p>
-</div>
-
-<div>
-    <a routerLink="">All</a>
-    <a routerLink="active">Active</a>
-    <a routerLink="completed">Completed</a>
-    <router-outlet></router-outlet>
-</div>
