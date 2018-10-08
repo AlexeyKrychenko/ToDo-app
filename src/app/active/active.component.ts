@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-active',
   templateUrl: './active.component.html',
   styleUrls: ['./active.component.css']
 })
-export class ActiveComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ActiveComponent {
 }
