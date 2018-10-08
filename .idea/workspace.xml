@@ -2,6 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78aca20e-bf29-456f-a609-1605e9d36d08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ToDo-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/active/active-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/active/active.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/active/active.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/active/active.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/active/active.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/completed/completed-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/completed/completed.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/completed/completed.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/completed/completed.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/completed/completed.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
@@ -67,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -156,6 +175,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ToDo-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDo-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="active" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -239,7 +265,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538990657545</updated>
-      <workItem from="1538990658892" duration="15905000" />
+      <workItem from="1538990658892" duration="16167000" />
     </task>
     <task id="LOCAL-00001" summary="t">
       <created>1539001201576</created>
@@ -252,19 +278,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15905000" />
+    <option name="totallyTimeSpent" value="16167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24590164" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24590164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49945354" visible="true" weight="0.19027027" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49945354" visible="true" weight="0.39891893" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50054646" side_tool="true" weight="0.45945945" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -426,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
