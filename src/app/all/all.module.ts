@@ -8,12 +8,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
-    AllRoutingModule,
+      AllRoutingModule,
       ReactiveFormsModule,
       FormsModule
   ],
   declarations: [
       AllComponent
-  ]
+  ],
+    exports: [AllComponent]
 })
 export class AllModule { }

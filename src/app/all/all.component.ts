@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../data.service';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -8,38 +9,35 @@ import {FormArray, FormControl, FormGroup} from '@angular/forms';
 })
 
 export class AllComponent implements OnInit {
+    todos;
+    length;
     todoForm: FormGroup;
-    length: string;
-
-    get TodoArray() {
-        return this.todoForm.get('todo') as FormArray;
-    }
+    constructor(private data: DataService) {}
 
     ngOnInit() {
+        this.getTodos();
         this.todoForm = new FormGroup({
-            addInput: new FormControl(''),
-            todo: new FormArray([]),
+            addInput: new FormControl('')
         });
+        this.length = this.data.lengthArray();
+        console.log(this.todos);
     }
 
-    fillForm() {
-        return new FormGroup({
-            name: new FormControl(this.todoForm.value.addInput),
-            check: new FormControl(false)
-        });
+    getTodos() {
+        this.todos = this.data.getTodos();
     }
 
     add() {
-        this.TodoArray.push(this.fillForm());
-        this.length = `${this.TodoArray.value.length} items length`;
-    }
-
-    deleteTodo(i: number) {
-        this.TodoArray.removeAt(i);
-        this.length = `${this.TodoArray.value.length} items length`;
-    }
-
-    checked() {
-        this.TodoArray.value.check = !this.TodoArray.value.check;
-    }
+        this.data.addTodo(this.todoForm.value.addInput);
+        this.length = this.data.lengthArray();
+        console.log(this.todos);
 }
+
+    deleteTodo(i) {
+        this.data.deleteTodo(i);
+        this.length = this.data.lengthArray();
+    }
+
+}
+
+
