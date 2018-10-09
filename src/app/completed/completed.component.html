@@ -1,6 +1,14 @@
 <form>
+
+  <input type="text"
+         placeholder="What needs to be done?"
+         formControlName="addInput"
+         class="form-input" required>
+
+  <button (click)="add()">+</button>
+
   <div *ngFor="let todo of todos.controls; let i = index" class="container-list">
-    <input type="checkbox">
+    <input type="checkbox" class="roundedTwo">
 
     <ul class="list-ul">
       <li class="name-todo">{{todo.value.name}}</li>

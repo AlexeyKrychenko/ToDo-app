@@ -1,18 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../data.service';
-import {FormArray, FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-all',
-  templateUrl: './all.component.html',
-  styleUrls: ['./all.component.css']
+    selector: 'app-all',
+    templateUrl: './all.component.html',
+    styleUrls: ['./all.component.css']
 })
 
 export class AllComponent implements OnInit {
     todos;
     length;
     todoForm: FormGroup;
-    constructor(private data: DataService) {}
+
+    constructor(private data: DataService) {
+    }
 
     ngOnInit() {
         this.getTodos();
@@ -30,8 +32,9 @@ export class AllComponent implements OnInit {
     add() {
         this.data.addTodo(this.todoForm.value.addInput);
         this.length = this.data.lengthArray();
+        this.todoForm.reset();
         console.log(this.todos);
-}
+    }
 
     deleteTodo(i) {
         this.data.deleteTodo(i);
@@ -39,5 +42,3 @@ export class AllComponent implements OnInit {
     }
 
 }
-
-
