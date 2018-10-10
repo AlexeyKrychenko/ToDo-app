@@ -6,9 +6,10 @@
                placeholder="What needs to be done?"
                formControlName="addInput"
                class="form-input"
+               required
                >
 
-        <button (click)="add()" class="btn-add" [disabled]="!todoForm.invalid">+</button>
+        <button (click)="add()" class="btn-add" [disabled]="!todoForm.valid">+</button>
 
         <router-outlet></router-outlet>
 
