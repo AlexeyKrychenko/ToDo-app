@@ -19,3 +19,29 @@
     margin-top: 20px;
 }
 
+
+.form-input{
+    width: 500px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 15px;
+    outline: none;
+    font-size: 20px;
+}
+
+.btn-add{
+    margin-left: 30px;
+    width: 35px;
+    height: 35px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    outline: none;
+    box-shadow:  5px 5px 5px rgba(0, 0 ,0, 0.5);
+    cursor: pointer;
+}
+
+

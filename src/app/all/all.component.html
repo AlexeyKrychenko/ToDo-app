@@ -1,30 +1,14 @@
-<form [formGroup]="todoForm">
+<div>
+    <div *ngFor="let todo of todos.controls; let i = index"
+         class="container-list">
 
-    <input type="text"
-           placeholder="What needs to be done?"
-           formControlName="addInput"
-           class="form-input" required>
+        <input type="checkbox" [checked]="todo.value.check" (change)="todo.value.check = !todo.value.check">
 
-    <button (click)="add()">+</button>
+        <ul class="list-ul">
+            <li class="name-todo">{{todo.value.name}}</li>
+        </ul>
 
-    <div>
-        <div *ngFor="let todo of todos.controls; let i = index"
-             class="container-list">
-
-            <input type="checkbox"
-                   class="checkbox">
-
-            <ul class="list-ul">
-                <li class="name-todo">{{todo.value.name}}</li>
-            </ul>
-
-            <button (click)="deleteTodo(i)" class="btn-delete">x</button>
-
-        </div>
+        <button (click)="deleteTodo(i)" class="btn-delete">x</button>
     </div>
+</div>
 
-    <div *ngIf="todos.length > 0 ">
-        <p>{{ length }}</p>
-    </div>
-
-</form>

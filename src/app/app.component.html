@@ -1,9 +1,24 @@
-  <div class="container">
+<div class="container">
+
+    <form [formGroup]="todoForm">
+
+        <input type="text"
+               placeholder="What needs to be done?"
+               formControlName="addInput"
+               class="form-input"
+               >
+
+        <button (click)="add()" class="btn-add" [disabled]="!todoForm.invalid">+</button>
+
         <router-outlet></router-outlet>
 
-      <div class="nav">
-        <a routerLink="" class="link">All</a>
-        <a routerLink="active" class="link">Active</a>
-        <a routerLink="completed" class="link">Completed</a>
-      </div>
-    </div>
+        <div *ngIf="todos.length > 0 ">
+            <p>{{ length.lengthArray() }}</p>
+        <div class="nav">
+            <a routerLink="" class="link">All</a>
+            <a routerLink="active" class="link">Active</a>
+            <a routerLink="completed" class="link">Completed</a>
+        </div>
+        </div>
+    </form>
+</div>

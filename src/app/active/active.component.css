@@ -1,13 +1,4 @@
 
-.form-input{
-    width: 500px;
-    padding: 10px 20px;
-    border: 2px solid;
-    border-radius: 15px;
-    outline: none;
-    font-size: 20px;
-}
-
 .list-ul{
     display: flex;
     list-style: none;
@@ -35,7 +26,4 @@
     color: #000000;
     border: none;
     font-size: 30px;
-}
-
-.checkbox{
 }
