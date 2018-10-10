@@ -10,7 +10,8 @@ import {DataService} from '../data.service';
 export class AllComponent implements OnInit {
     todos;
 
-    constructor(private data: DataService) {}
+    constructor(private data: DataService) {
+    }
 
     ngOnInit() {
         this.todos = this.data.getTodos();

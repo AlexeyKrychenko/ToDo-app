@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.getTodos();
         this.todoForm = new FormGroup({
-            addInput: new FormControl('', Validators.minLength(1) )
+            addInput: new FormControl('', Validators.minLength(1))
         });
         this.length = this.data;
     }
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     add() {
         this.data.addTodo(this.todoForm.value.addInput);
         this.todoForm.reset();
-        }
+    }
 }
 
 

@@ -1,26 +1,25 @@
-.link{
+.link {
     margin-right: 30px;
     text-decoration: none;
     color: #000;
 
 }
 
-.link:hover{
-   color: red;
+.link:hover {
+    color: red;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.nav{
+.nav {
     margin-top: 20px;
 }
 
-
-.form-input{
+.form-input {
     width: 500px;
     padding: 10px 20px;
     border: 2px solid;
@@ -29,7 +28,7 @@
     font-size: 20px;
 }
 
-.btn-add{
+.btn-add {
     margin-left: 30px;
     width: 35px;
     height: 35px;
@@ -40,7 +39,7 @@
     color: #ffffff;
     font-size: 20px;
     outline: none;
-    box-shadow:  5px 5px 5px rgba(0, 0 ,0, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
