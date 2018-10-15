@@ -1,18 +1,24 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {TodoListComponent} from './todo-list/todo-list.component';
 
-const routes: Routes = [{
-    path: '',
-    loadChildren: './all/all.module#AllModule'
-},
+const routes: Routes = [
+    {
+        path: '',
+        component: TodoListComponent,
+        data: {todos: 'all'}
+    },
     {
         path: 'active',
-        loadChildren: './active/active.module#ActiveModule'
+        component: TodoListComponent,
+        data: {todos: 'active'}
     },
     {
         path: 'completed',
-        loadChildren: './completed/completed.module#CompletedModule'
-    }
+        component: TodoListComponent,
+        data: {todos: 'completed'}
+    },
+
 ];
 
 @NgModule({
