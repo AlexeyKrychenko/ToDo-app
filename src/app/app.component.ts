@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
     addInput: FormControl;
     todosArray: FormArray;
+    service: DataService;
 
     constructor(private data: DataService) {
     }
@@ -25,5 +26,6 @@ export class AppComponent implements OnInit {
     addTodo() {
         this.todosArray.push(this.data.fillForm(this.addInput.value));
         this.addInput.reset();
+        this.service = this.data;
     }
 }

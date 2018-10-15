@@ -7,7 +7,6 @@
                required
                (keyup.enter)="addTodo()"
         >
-
     </header>
 
     <div>
@@ -15,13 +14,13 @@
     </div>
 
     <footer>
-        <!--<div *ngIf=" length > 0 ">-->
-            <!--<p>{{ length + ' items length'}}</p>-->
+        <div *ngIf=" service?.lengthArray() > 0 ">
+            <p>{{ service.lengthArray() + ' items length'}}</p>
             <div class="nav">
                 <a routerLink="" class="link">All</a>
                 <a routerLink="active" class="link">Active</a>
                 <a routerLink="completed" class="link">Completed</a>
             </div>
-        <!--</div>-->
+        </div>
     </footer>
 </div>

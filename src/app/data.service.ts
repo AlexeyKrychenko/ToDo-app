@@ -15,4 +15,8 @@ export class DataService {
             check: new FormControl(false)
         });
     }
+
+    lengthArray() {
+        return this.todos$.getValue().value.length;
+    }
 }
