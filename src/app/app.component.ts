@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
         this.addInput = new FormControl('', Validators.minLength(1));
         this.todosArray = new FormArray([]);
         this.data.todos$.next(this.todosArray);
+        console.log(this.data.todos$);
     }
 
     addTodo() {
