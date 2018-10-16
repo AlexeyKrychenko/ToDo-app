@@ -1,23 +1,15 @@
 import {Injectable} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import {BehaviorSubject} from 'rxjs';
+import { Subject} from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class DataService {
 
-    todos$: BehaviorSubject<any> = new BehaviorSubject([]);
+    todos$: Subject<any> = new Subject<any>();
 
-    fillForm(value: string) {
-        return new FormGroup({
-            name: new FormControl(value),
-            check: new FormControl(false)
-        });
-    }
-
-    lengthArray() {
-        return this.todos$.getValue().value.length;
-    }
+    // lengthArray() {
+    //     return this.todos$.getValue().value.length;
+    // }
 
 }

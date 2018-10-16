@@ -1,0 +1,10 @@
+
+<div *ngFor="let todo of todosArray.controls; let i = index" class="container-list">
+        <input type="checkbox" [checked]="todo.value.check" (change)="todo.value.check = !todo.value.check">
+
+        <ul class="list-ul">
+            <li class="name-todo">{{todo.value.name}}</li>
+        </ul>
+
+        <button (click)="deleteTodo(i)" class="btn-delete">x</button>
+</div>

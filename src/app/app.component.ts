@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormArray, FormControl, Validators} from '@angular/forms';
+import {FormControl, Validators} from '@angular/forms';
 import {DataService} from './data.service';
 
 @Component({
@@ -11,7 +11,6 @@ import {DataService} from './data.service';
 export class AppComponent implements OnInit {
 
     addInput: FormControl;
-    todosArray: FormArray;
     service: DataService;
 
     constructor(private data: DataService) {
@@ -19,13 +18,10 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.addInput = new FormControl('', Validators.minLength(1));
-        this.todosArray = new FormArray([]);
-        this.data.todos$.next(this.todosArray);
-        console.log(this.data.todos$);
     }
 
     addTodo() {
-        this.todosArray.push(this.data.fillForm(this.addInput.value));
+        this.data.todos$.next(this.addInput.value);
         this.addInput.reset();
         this.service = this.data;
     }
